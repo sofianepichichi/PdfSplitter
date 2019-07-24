@@ -1,4 +1,36 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="670,756" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PDF;assembly=pdfLibrary" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.String1="Rue :" this:Main.String2="Ville :" this:Main.String_Libelle_Bat="Type RE-Fx du bâtiment :" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PDF;assembly=pdfLibrary" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="DataPDF" Type="OutArgument(x:String)" />
+    <x:Property Name="PDF_File" Type="InArgument(x:String)" />
+    <x:Property Name="Out_Values" Type="OutArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="String1" Type="InArgument(x:String)" />
+    <x:Property Name="String2" Type="InArgument(x:String)" />
+    <x:Property Name="out_result" Type="OutArgument(x:String)" />
+    <x:Property Name="in_DataPDF" Type="InOutArgument(x:String)" />
+    <x:Property Name="str" Type="InArgument(x:String)" />
+    <x:Property Name="Out_PDF_File" Type="OutArgument(x:String)" />
+    <x:Property Name="Libelle_Bat" Type="InArgument(ui:GenericValue)" />
+    <x:Property Name="String_Libelle_Bat" Type="InArgument(x:String)" />
+    <x:Property Name="Str_Bat" Type="InArgument(ui:GenericValue)" />
+    <x:Property Name="out_Str_Bat" Type="OutArgument(ui:GenericValue)" />
+  </x:Members>
+  <this:Main.PDF_File>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.PDF_File>
+  <this:Main.str>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.str>
+  <this:Main.Libelle_Bat>
+    <InArgument x:TypeArguments="ui:GenericValue" />
+  </this:Main.Libelle_Bat>
+  <this:Main.Str_Bat>
+    <InArgument x:TypeArguments="ui:GenericValue" />
+  </this:Main.Str_Bat>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>670,756</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
       <x:String>System.Activities</x:String>
@@ -255,34 +287,19 @@
                   <av:Size x:Key="ShapeSize">216,66</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Sequence DisplayName="Read PDF Back office" sap:VirtualizedContainerService.HintSize="626,5742" sap2010:WorkflowViewState.IdRef="Sequence_7">
-                <Sequence.Variables>
-                  <Variable x:TypeArguments="x:String" Name="PDF_File" />
-                  <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Out_Values" />
-                  <Variable x:TypeArguments="x:String" Default="Rue :" Name="String1" />
-                  <Variable x:TypeArguments="x:String" Default="Ville :" Name="String2" />
-                  <Variable x:TypeArguments="x:String" Name="in_DataPDF" />
-                  <Variable x:TypeArguments="x:String" Name="out_result" />
-                  <Variable x:TypeArguments="x:String" Name="str" />
-                  <Variable x:TypeArguments="x:String" Name="DataPDF" />
-                  <Variable x:TypeArguments="x:String" Name="Out_PDF_File" />
-                  <Variable x:TypeArguments="ui:GenericValue" Name="Libelle_Bat" />
-                  <Variable x:TypeArguments="x:String" Default="Type RE-Fx du bâtiment :" Name="String_Libelle_Bat" />
-                  <Variable x:TypeArguments="ui:GenericValue" Name="Str_Bat" />
-                  <Variable x:TypeArguments="ui:GenericValue" Name="out_Str_Bat" />
-                </Sequence.Variables>
+              <Sequence DisplayName="Read PDF Back office" sap:VirtualizedContainerService.HintSize="626,5647" sap2010:WorkflowViewState.IdRef="Sequence_7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="588,3440" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[directory.GetFiles(&quot;C:\Users\frus74117\Desktop\PDF&quot;)]">
+                <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="588,3345" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[directory.GetFiles(&quot;C:\Users\frus74117\Desktop\PDF&quot;)]">
                   <ui:ForEach.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="556,3306" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="556,3211" sap2010:WorkflowViewState.IdRef="Sequence_16">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -292,7 +309,7 @@
                         <ui:ReadPDFText DisplayName="Read PDF Text" FileName="[item.ToString]" sap:VirtualizedContainerService.HintSize="518,59" sap2010:WorkflowViewState.IdRef="ReadPDFText_2" Range="All" Text="[DataPDF]" />
                         <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="518,61" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[DataPDF]" />
                         <p:ReadFullPDF DisplayName="Read full PDF" sap:VirtualizedContainerService.HintSize="518,22" sap2010:WorkflowViewState.IdRef="ReadFullPDF_1" PDF_FilePath="C:\Users\frus74117\Desktop\FN_PA-00023-2019_190203.pdf" PDF_Text="[Out_PDF_File]" />
-                        <Sequence DisplayName="Read PDF Back office" sap:VirtualizedContainerService.HintSize="518,2851" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                        <Sequence DisplayName="Read PDF Back office" sap:VirtualizedContainerService.HintSize="518,2756" sap2010:WorkflowViewState.IdRef="Sequence_22">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="PDF_File" />
                             <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="Out_Values" />
@@ -403,7 +420,6 @@
                               </Assign>
                             </If.Then>
                           </If>
-                          <ui:Comment sap:VirtualizedContainerService.HintSize="480,55" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Write your comments in the Text property" />
                           <If Condition="[Libelle_Bat.Equals(&quot;Libellé du bâtiment :&quot;)]" sap:VirtualizedContainerService.HintSize="480,51" sap2010:WorkflowViewState.IdRef="If_4">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
