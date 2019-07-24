@@ -1,6 +1,8 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="GetValuesFromPDF" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="GetValuesFromPDF" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="clr-namespace:PDF;assembly=pdfLibrary" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="out_ValuesFromPDF" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+    <x:Property Name="DataPDF" Type="OutArgument(x:String)" />
+    <x:Property Name="Out_PDF_File" Type="OutArgument(x:String)" />
   </x:Members>
   <this:GetValuesFromPDF.out_ValuesFromPDF>
     <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" />
@@ -8,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>408,953</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>516,1832</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>GetValuesFromPDF_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
@@ -55,7 +57,7 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetValuesFromPDF" sap:VirtualizedContainerService.HintSize="368,833" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetValuesFromPDF" sap:VirtualizedContainerService.HintSize="476,1712" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="Bailleur" />
       <Variable x:TypeArguments="x:String" Name="in_TextPDF" />
@@ -67,7 +69,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign sap:VirtualizedContainerService.HintSize="330,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="438,60" sap2010:WorkflowViewState.IdRef="Assign_5">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[out_ValuesFromPDF]</OutArgument>
       </Assign.To>
@@ -75,80 +77,141 @@
         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[new Dictionary(of String, Object)]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke PdfGetValues workflow" sap:VirtualizedContainerService.HintSize="330,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="PdfGetValues.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="str" />
-        <OutArgument x:TypeArguments="x:String" x:Key="Out_PDF_File" />
-        <InArgument x:TypeArguments="ui:GenericValue" x:Key="Libelle_Bat" />
-        <InArgument x:TypeArguments="x:String" x:Key="String_Libelle_Bat">Type RE-Fx du bâtiment :</InArgument>
-        <InArgument x:TypeArguments="ui:GenericValue" x:Key="Str_Bat" />
-        <OutArgument x:TypeArguments="ui:GenericValue" x:Key="out_Str_Bat" />
-        <OutArgument x:TypeArguments="x:String" x:Key="DataPDF" />
-        <InArgument x:TypeArguments="x:String" x:Key="PDF_File" />
-        <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="Out_Values" />
-        <InArgument x:TypeArguments="x:String" x:Key="String1">Bailleur</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="String2">Adresse Bailleur</InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_result">[Bailleur]</OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_DataPDF">[in_TextPDF]</InArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
-    <Assign sap:VirtualizedContainerService.HintSize="330,60" sap2010:WorkflowViewState.IdRef="Assign_2">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:Object">[out_ValuesFromPDF("Bailleur")]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:Object">[Bailleur.Trim]</InArgument>
-      </Assign.Value>
-    </Assign>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke PdfGetValues workflow" sap:VirtualizedContainerService.HintSize="330,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="PdfGetValues.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="str" />
-        <OutArgument x:TypeArguments="x:String" x:Key="Out_PDF_File" />
-        <InArgument x:TypeArguments="ui:GenericValue" x:Key="Libelle_Bat" />
-        <InArgument x:TypeArguments="x:String" x:Key="String_Libelle_Bat">Type RE-Fx du bâtiment :</InArgument>
-        <InArgument x:TypeArguments="ui:GenericValue" x:Key="Str_Bat" />
-        <OutArgument x:TypeArguments="ui:GenericValue" x:Key="out_Str_Bat" />
-        <OutArgument x:TypeArguments="x:String" x:Key="DataPDF" />
-        <InArgument x:TypeArguments="x:String" x:Key="PDF_File" />
-        <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="Out_Values" />
-        <InArgument x:TypeArguments="x:String" x:Key="String1">Ville :</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="String2">CP :</InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_result">[Ville]</OutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="in_DataPDF">[in_TextPDF]</InOutArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
-    <Assign sap:VirtualizedContainerService.HintSize="330,60" sap2010:WorkflowViewState.IdRef="Assign_3">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:Object">[out_ValuesFromPDF("Ville")]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:Object">[Ville.Trim]</InArgument>
-      </Assign.Value>
-    </Assign>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke PdfGetValues workflow" sap:VirtualizedContainerService.HintSize="330,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="PdfGetValues.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="str" />
-        <OutArgument x:TypeArguments="x:String" x:Key="Out_PDF_File" />
-        <InArgument x:TypeArguments="ui:GenericValue" x:Key="Libelle_Bat" />
-        <InArgument x:TypeArguments="x:String" x:Key="String_Libelle_Bat">Type RE-Fx du bâtiment :</InArgument>
-        <InArgument x:TypeArguments="ui:GenericValue" x:Key="Str_Bat" />
-        <OutArgument x:TypeArguments="ui:GenericValue" x:Key="out_Str_Bat" />
-        <OutArgument x:TypeArguments="x:String" x:Key="DataPDF" />
-        <InArgument x:TypeArguments="x:String" x:Key="PDF_File" />
-        <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="Out_Values" />
-        <InArgument x:TypeArguments="x:String" x:Key="String1">CP :</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="String2">Société Chorus :</InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_result">[CodePostal]</OutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="in_DataPDF">[in_TextPDF]</InOutArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
-    <Assign sap:VirtualizedContainerService.HintSize="330,60" sap2010:WorkflowViewState.IdRef="Assign_4">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:Object">[out_ValuesFromPDF("CodePostal")]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:Object">[CodePostal.Trim]</InArgument>
-      </Assign.Value>
-    </Assign>
+    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="438,1520" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[directory.GetFiles(&quot;C:\Users\frus74117\Desktop\PDF&quot;)]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="406,1385" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="368,62" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[item.ToString]" />
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="368,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="368,151" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ReadPDFText DisplayName="Read PDF Text" FileName="[item.ToString]" sap:VirtualizedContainerService.HintSize="330,59" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" Range="All" Text="[DataPDF]" />
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="368,62" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[DataPDF]" />
+            <p:ReadFullPDF DisplayName="Read full PDF" sap:VirtualizedContainerService.HintSize="368,22" sap2010:WorkflowViewState.IdRef="ReadFullPDF_1" PDF_FilePath="[item.ToString]" PDF_Text="[Out_PDF_File]" />
+            <Sequence DisplayName="GetValuesFromPDF" sap:VirtualizedContainerService.HintSize="368,935" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="Bailleur" />
+                <Variable x:TypeArguments="x:String" Name="in_TextPDF" />
+                <Variable x:TypeArguments="x:String" Name="Ville" />
+                <Variable x:TypeArguments="x:String" Name="CodePostal" />
+                <Variable x:TypeArguments="x:String" Name="PDF_File" />
+                <Variable x:TypeArguments="x:String" Name="PDF" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="330,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[out_ValuesFromPDF]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)">[new Dictionary(of String, Object)]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke PdfGetValues workflow" sap:VirtualizedContainerService.HintSize="330,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="PDF_Folder/PdfGetValues.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="str" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="Out_PDF_File">[PDF_File]</OutArgument>
+                  <InArgument x:TypeArguments="ui:GenericValue" x:Key="Libelle_Bat" />
+                  <InArgument x:TypeArguments="x:String" x:Key="String_Libelle_Bat">Type RE-Fx du bâtiment :</InArgument>
+                  <InArgument x:TypeArguments="ui:GenericValue" x:Key="Str_Bat" />
+                  <OutArgument x:TypeArguments="ui:GenericValue" x:Key="out_Str_Bat" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="DataPDF" />
+                  <InArgument x:TypeArguments="x:String" x:Key="PDF_File" />
+                  <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="Out_Values" />
+                  <InArgument x:TypeArguments="x:String" x:Key="String1">Bailleur</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="String2">Adresse Bailleur</InArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="out_result">[Bailleur]</OutArgument>
+                  <InOutArgument x:TypeArguments="x:String" x:Key="in_DataPDF" />
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+              <Assign sap:VirtualizedContainerService.HintSize="330,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Object">[out_ValuesFromPDF("Bailleur")]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Object">[Bailleur.Trim]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke PdfGetValues workflow" sap:VirtualizedContainerService.HintSize="330,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="PDF_Folder/PdfGetValues.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="str" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="Out_PDF_File">[PDF_File]</OutArgument>
+                  <InArgument x:TypeArguments="ui:GenericValue" x:Key="Libelle_Bat" />
+                  <InArgument x:TypeArguments="x:String" x:Key="String_Libelle_Bat">Type RE-Fx du bâtiment :</InArgument>
+                  <InArgument x:TypeArguments="ui:GenericValue" x:Key="Str_Bat" />
+                  <OutArgument x:TypeArguments="ui:GenericValue" x:Key="out_Str_Bat" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="DataPDF" />
+                  <InArgument x:TypeArguments="x:String" x:Key="PDF_File">[PDF_File]</InArgument>
+                  <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="Out_Values" />
+                  <InArgument x:TypeArguments="x:String" x:Key="String1">Ville :</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="String2">CP :</InArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="out_result">[Ville]</OutArgument>
+                  <InOutArgument x:TypeArguments="x:String" x:Key="in_DataPDF">[in_TextPDF]</InOutArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+              <Assign sap:VirtualizedContainerService.HintSize="330,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Object">[out_ValuesFromPDF("Ville")]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Object">[Ville.Trim]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke PdfGetValues workflow" sap:VirtualizedContainerService.HintSize="330,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="PDF_Folder/PdfGetValues.xaml">
+                <ui:InvokeWorkflowFile.Arguments>
+                  <InArgument x:TypeArguments="x:String" x:Key="str" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="Out_PDF_File">[PDF_File]</OutArgument>
+                  <InArgument x:TypeArguments="ui:GenericValue" x:Key="Libelle_Bat" />
+                  <InArgument x:TypeArguments="x:String" x:Key="String_Libelle_Bat">Type RE-Fx du bâtiment :</InArgument>
+                  <InArgument x:TypeArguments="ui:GenericValue" x:Key="Str_Bat" />
+                  <OutArgument x:TypeArguments="ui:GenericValue" x:Key="out_Str_Bat" />
+                  <OutArgument x:TypeArguments="x:String" x:Key="DataPDF" />
+                  <InArgument x:TypeArguments="x:String" x:Key="PDF_File">[PDF_File]</InArgument>
+                  <OutArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="Out_Values" />
+                  <InArgument x:TypeArguments="x:String" x:Key="String1">CP :</InArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="String2">Société Chorus :</InArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="out_result">[CodePostal]</OutArgument>
+                  <InOutArgument x:TypeArguments="x:String" x:Key="in_DataPDF">[in_TextPDF]</InOutArgument>
+                </ui:InvokeWorkflowFile.Arguments>
+              </ui:InvokeWorkflowFile>
+              <Assign sap:VirtualizedContainerService.HintSize="330,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Object">[out_ValuesFromPDF("CodePostal")]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Object">[CodePostal.Trim]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="330,62" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[out_ValuesFromPDF(&quot;CodePostal&quot;).ToString]" />
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
   </Sequence>
 </Activity>
