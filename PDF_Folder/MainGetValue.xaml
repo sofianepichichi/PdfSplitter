@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="MainGetValue" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="670,756" sap2010:WorkflowViewState.IdRef="MainGetValue_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="MainGetValue" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="670,716" sap2010:WorkflowViewState.IdRef="MainGetValue_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="21">
       <x:String>System.Activities</x:String>
@@ -48,6 +48,7 @@
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="in_DataPDF" />
       <Variable x:TypeArguments="x:String" Name="PDF_File" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="ValueFromPDF" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -69,7 +70,7 @@
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke GetValuesFromPDF workflow" sap:VirtualizedContainerService.HintSize="330,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="PDF_Folder\GetValuesFromPDF.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_ValuesFromPDF" />
+          <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="out_ValuesFromPDF">[ValueFromPDF]</InArgument>
           <OutArgument x:TypeArguments="x:String" x:Key="DataPDF">[in_DataPDF]</OutArgument>
           <OutArgument x:TypeArguments="x:String" x:Key="Out_PDF_File">[PDF_File]</OutArgument>
         </ui:InvokeWorkflowFile.Arguments>
