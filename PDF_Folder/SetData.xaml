@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Get_ValueInPdf" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Get_ValueInPdf_1"
+<Activity mc:Ignorable="sap sap2010" x:Class="SetData" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="SetData_1"
  xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" 
  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
  xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
@@ -52,7 +52,7 @@
             <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
         </sco:Collection>
     </TextExpression.ReferencesForImplementation>
-    <Sequence DisplayName="Get_ValueInPdf" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence DisplayName="SetData" sap2010:WorkflowViewState.IdRef="Sequence_1">
         <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>

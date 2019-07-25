@@ -2,6 +2,27 @@
   "Packages": [
     {
       "Package": {
+        "Id": "BalaReva.Pdf.Activities",
+        "Version": "2019.1.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\frus74117\\.nuget\\packages\\balareva.pdf.activities/2019.1.0\\lib/BalaReva.PDF.Design.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\balareva.pdf.activities/2019.1.0\\lib/BalaReva.PDF2.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\balareva.pdf.activities/2019.1.0\\lib/itextsharp.dll"
+      ]
+    },
+    {
+      "Package": {
+        "Id": "PDF_Activities",
+        "Version": "1.0.2"
+      },
+      "Assemblies": [
+        "C:\\Users\\frus74117\\.nuget\\packages\\itextsharp/5.5.13\\lib/itextsharp.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\pdf_activities/1.0.2\\lib/pdfLibrary.dll"
+      ]
+    },
+    {
+      "Package": {
         "Id": "UiPath.Excel.Activities",
         "Version": "2.6.2"
       },
@@ -39,91 +60,13 @@
     },
     {
       "Package": {
-        "Id": "UiPath.System.Activities",
-        "Version": "19.6.0"
-      },
-      "Assemblies": [
-        "C:\\Users\\frus74117\\.nuget\\packages\\csvhelper/2.13.5\\lib/net40-client/CsvHelper.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\microsoft.aspnet.signalr.client/2.4.0\\lib/net45/Microsoft.AspNet.SignalR.Client.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\microsoft.rest.clientruntime/2.3.20\\lib/net461/Microsoft.Rest.ClientRuntime.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.6.0\\lib/net461/ActiproSoftware.Docking.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.6.0\\lib/net461/ActiproSoftware.Ribbon.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.6.0\\lib/net461/ActiproSoftware.Shared.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.6.0\\lib/net461/ActiproSoftware.SyntaxEditor.Addons.DotNet.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.6.0\\lib/net461/ActiproSoftware.SyntaxEditor.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.6.0\\lib/net461/ActiproSoftware.Text.Addons.DotNet.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.6.0\\lib/net461/ActiproSoftware.Text.LLParser.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.6.0\\lib/net461/ActiproSoftware.Text.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.6.0\\lib/net461/ActiproSoftware.Wizard.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.6.0\\lib/net461/UiPath.OrchestratorClient.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.6.0\\lib/net461/UiPath.System.Activities.Design.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.6.0\\lib/net461/UiPath.System.Activities.dll"
-      ]
-    },
-    {
-      "Package": {
-        "Id": "UiPath.UIAutomation.Activities",
-        "Version": "19.6.0"
-      },
-      "Assemblies": [
-        "C:\\Users\\frus74117\\.nuget\\packages\\avalonedit/5.0.3\\lib/Net40/ICSharpCode.AvalonEdit.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.Themes.Aero.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.Themes.Metro.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.Themes.VS2010.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.DataGrid.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.Toolkit.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\humanizer.core/2.4.2\\lib/netstandard2.0/Humanizer.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath/19.6.7108.25473\\lib/UiPath.Interop.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.ocr.contracts/1.0.0\\lib/net45/UiPath.OCR.Contracts.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.6.0\\lib/net461/ActiproSoftware.DataGrid.Contrib.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.6.0\\lib/net461/ActiproSoftware.Docking.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.6.0\\lib/net461/ActiproSoftware.Editors.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.6.0\\lib/net461/ActiproSoftware.Ribbon.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.6.0\\lib/net461/ActiproSoftware.Shared.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.6.0\\lib/net461/ActiproSoftware.SyntaxEditor.Addons.DotNet.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.6.0\\lib/net461/ActiproSoftware.SyntaxEditor.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.6.0\\lib/net461/ActiproSoftware.Text.Addons.DotNet.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.6.0\\lib/net461/ActiproSoftware.Text.LLParser.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.6.0\\lib/net461/ActiproSoftware.Text.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.6.0\\lib/net461/ActiproSoftware.Wizard.Wpf.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.6.0\\lib/net461/UiPath.UIAutomation.Activities.Design.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.6.0\\lib/net461/UiPath.UiAutomation.Activities.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.6.0\\lib/net461/UiPath.Wizards.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.0\\lib/net452/UiPath.Vision.AbbyyCloud.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.0\\lib/net452/UiPath.Vision.AbbyyFRE11.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.0\\lib/net452/UiPath.Vision.AbbyyFRE12.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.0\\lib/net452/UiPath.Vision.AbbyyFRECommon.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.0\\lib/net452/UiPath.Vision.AzureComputerVision.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.0\\lib/net452/UiPath.Vision.Core.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.0\\lib/net452/UiPath.Vision.GoogleCloud.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.0\\lib/net452/UiPath.Vision.Microsoft.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.0\\lib/net452/UiPath.Vision.MicrosoftCloud.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.0\\lib/net452/UiPath.Vision.Tesseract.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.0\\lib/net452/UiPath.Vision.dll"
-      ]
-    },
-    {
-      "Package": {
-        "Id": "BalaReva.Pdf.Activities",
-        "Version": "2019.1.0"
-      },
-      "Assemblies": [
-        "C:\\Users\\frus74117\\.nuget\\packages\\balareva.pdf.activities/2019.1.0\\lib/BalaReva.PDF.Design.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\balareva.pdf.activities/2019.1.0\\lib/BalaReva.PDF2.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\balareva.pdf.activities/2019.1.0\\lib/itextsharp.dll"
-      ]
-    },
-    {
-      "Package": {
         "Id": "UiPath.PDF.Activities",
         "Version": "2.1.0"
       },
       "Assemblies": [
         "C:\\Users\\frus74117\\.nuget\\packages\\bitmiracle.docotic.pdf/5.2.8369\\lib/net40/BitMiracle.Docotic.Pdf.dll",
         "C:\\Users\\frus74117\\.nuget\\packages\\system.valuetuple/4.5.0\\lib/net461/System.ValueTuple.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.ocr.contracts/1.0.0\\lib/net45/UiPath.OCR.Contracts.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.ocr.contracts/2.0.0\\lib/net45/UiPath.OCR.Contracts.dll",
         "C:\\Users\\frus74117\\.nuget\\packages\\uipath.pdf.activities/2.1.0\\lib/net461/UiPath.PDF.Activities.Design.dll",
         "C:\\Users\\frus74117\\.nuget\\packages\\uipath.pdf.activities/2.1.0\\lib/net461/UiPath.PDF.Activities.dll",
         "C:\\Users\\frus74117\\.nuget\\packages\\uipath.pdf.activities/2.1.0\\lib/net461/UiPath.PDF.dll"
@@ -142,12 +85,69 @@
     },
     {
       "Package": {
-        "Id": "PDF_Activities",
-        "Version": "1.0.2"
+        "Id": "UiPath.UIAutomation.Activities",
+        "Version": "19.7.0"
       },
       "Assemblies": [
-        "C:\\Users\\frus74117\\.nuget\\packages\\itextsharp/5.5.13\\lib/itextsharp.dll",
-        "C:\\Users\\frus74117\\.nuget\\packages\\pdf_activities/1.0.2\\lib/pdfLibrary.dll"
+        "C:\\Users\\frus74117\\.nuget\\packages\\avalonedit/5.0.3\\lib/Net40/ICSharpCode.AvalonEdit.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.Themes.Aero.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.Themes.Metro.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.Themes.VS2010.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.AvalonDock.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.DataGrid.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\extended.wpf.toolkit/2.8.0\\lib/net40/Xceed.Wpf.Toolkit.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\humanizer.core/2.4.2\\lib/netstandard2.0/Humanizer.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath/19.7.7128.27029\\lib/UiPath.Interop.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.ocr.contracts/2.0.0\\lib/net45/UiPath.OCR.Contracts.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.7.0\\lib/net461/ActiproSoftware.DataGrid.Contrib.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.7.0\\lib/net461/ActiproSoftware.Docking.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.7.0\\lib/net461/ActiproSoftware.Editors.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.7.0\\lib/net461/ActiproSoftware.Ribbon.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.7.0\\lib/net461/ActiproSoftware.Shared.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.7.0\\lib/net461/ActiproSoftware.SyntaxEditor.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.7.0\\lib/net461/ActiproSoftware.SyntaxEditor.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.7.0\\lib/net461/ActiproSoftware.Text.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.7.0\\lib/net461/ActiproSoftware.Text.LLParser.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.7.0\\lib/net461/ActiproSoftware.Text.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.7.0\\lib/net461/ActiproSoftware.Wizard.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.7.0\\lib/net461/UiPath.UIAutomation.Activities.Design.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.7.0\\lib/net461/UiPath.UiAutomation.Activities.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.uiautomation.activities/19.7.0\\lib/net461/UiPath.Wizards.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.1\\lib/net452/UiPath.Vision.AbbyyCloud.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.1\\lib/net452/UiPath.Vision.AbbyyFRE11.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.1\\lib/net452/UiPath.Vision.AbbyyFRE12.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.1\\lib/net452/UiPath.Vision.AbbyyFRECommon.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.1\\lib/net452/UiPath.Vision.AzureComputerVision.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.1\\lib/net452/UiPath.Vision.Core.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.1\\lib/net452/UiPath.Vision.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.1\\lib/net452/UiPath.Vision.GoogleCloud.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.1\\lib/net452/UiPath.Vision.Microsoft.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.1\\lib/net452/UiPath.Vision.MicrosoftCloud.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.vision/1.6.1\\lib/net452/UiPath.Vision.Tesseract.dll"
+      ]
+    },
+    {
+      "Package": {
+        "Id": "UiPath.System.Activities",
+        "Version": "19.7.0"
+      },
+      "Assemblies": [
+        "C:\\Users\\frus74117\\.nuget\\packages\\csvhelper/2.13.5\\lib/net40-client/CsvHelper.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\microsoft.aspnet.signalr.client/2.4.0\\lib/net45/Microsoft.AspNet.SignalR.Client.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\microsoft.rest.clientruntime/2.3.20\\lib/net461/Microsoft.Rest.ClientRuntime.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\newtonsoft.json/11.0.2\\lib/net45/Newtonsoft.Json.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.7.0\\lib/net461/ActiproSoftware.Docking.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.7.0\\lib/net461/ActiproSoftware.Ribbon.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.7.0\\lib/net461/ActiproSoftware.Shared.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.7.0\\lib/net461/ActiproSoftware.SyntaxEditor.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.7.0\\lib/net461/ActiproSoftware.SyntaxEditor.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.7.0\\lib/net461/ActiproSoftware.Text.Addons.DotNet.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.7.0\\lib/net461/ActiproSoftware.Text.LLParser.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.7.0\\lib/net461/ActiproSoftware.Text.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.7.0\\lib/net461/ActiproSoftware.Wizard.Wpf.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.7.0\\lib/net461/UiPath.OrchestratorClient.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.7.0\\lib/net461/UiPath.System.Activities.Design.dll",
+        "C:\\Users\\frus74117\\.nuget\\packages\\uipath.system.activities/19.7.0\\lib/net461/UiPath.System.Activities.dll"
       ]
     }
   ],
@@ -285,7 +285,7 @@
     },
     "UiPath": {
       "Id": "UiPath",
-      "Version": "19.6.7108.25473",
+      "Version": "19.7.7128.27029",
       "Dependencies": []
     },
     "UiPath.Excel.Activities": {
@@ -338,7 +338,7 @@
     },
     "UiPath.OCR.Contracts": {
       "Id": "UiPath.OCR.Contracts",
-      "Version": "1.0.0",
+      "Version": "2.0.0",
       "Dependencies": []
     },
     "UiPath.PDF.Activities": {
@@ -361,7 +361,7 @@
     },
     "UiPath.System.Activities": {
       "Id": "UiPath.System.Activities",
-      "Version": "19.6.0",
+      "Version": "19.7.0",
       "Dependencies": [
         {
           "Item1": "CsvHelper",
@@ -383,19 +383,19 @@
     },
     "UiPath.UIAutomation.Activities": {
       "Id": "UiPath.UIAutomation.Activities",
-      "Version": "19.6.0",
+      "Version": "19.7.0",
       "Dependencies": [
         {
           "Item1": "UiPath",
-          "Item2": "[19.6.7108.25473, )"
+          "Item2": "[19.7.7128.27029, )"
         },
         {
           "Item1": "UiPath.Vision",
-          "Item2": "[1.6.0, )"
+          "Item2": "[1.6.1, )"
         },
         {
           "Item1": "UiPath.OCR.Contracts",
-          "Item2": "[1.0.0, )"
+          "Item2": "[2.0.0, )"
         },
         {
           "Item1": "AvalonEdit",
@@ -413,7 +413,7 @@
     },
     "UiPath.Vision": {
       "Id": "UiPath.Vision",
-      "Version": "1.6.0",
+      "Version": "1.6.1",
       "Dependencies": []
     },
     "UiPathTeam.PDF.Extensions.Activities": {
